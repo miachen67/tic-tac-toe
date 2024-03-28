@@ -1,0 +1,67 @@
+body {
+    background-color: #D4EFFF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.title{
+    text-align: center;
+    padding-top: 25px;
+}
+
+.wrapper{
+    display: flex;
+    padding: 5vh;
+    justify-content: center;
+}
+
+.inputs{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.inputs input{
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table{
+    width: 30vw;
+    height: 30vw;
+}
+
+#controls{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+}
+
+#start{
+    background-color: #E9FFDF;
+}
+
+#restart{
+    background-color: #FC9090;
+}
+
+
