@@ -37,6 +37,13 @@ table, tr, td{
     background-color: white;
 }
 
+td {
+    cursor: pointer;
+    text-align: center;
+    height: 10vw;
+    width: 10vw;    
+}
+
 table{
     width: 30vw;
     height: 30vw;
@@ -54,6 +61,7 @@ button{
     border-width: 1px;
     font-family: 'Roboto Mono', monospace;
     font-size: 10px;
+    cursor: pointer;
 }
 
 #start{
@@ -64,4 +72,9 @@ button{
     background-color: #FC9090;
 }
 
+#messages{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 16px;
+}
 
