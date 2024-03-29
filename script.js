@@ -30,6 +30,7 @@ const TicTacToe = (function(){
                 if (JSON.stringify(tester) === JSON.stringify(winningCombos[i])){
                     console.log("player won");
                     console.log(prevMoves);
+                    printWinner();
                     return true;
                 }
             }
@@ -100,6 +101,7 @@ const TicTacToe = (function(){
 
             let currentPlayer = null;
             currentPlayer = newGame.player1;
+            document.querySelector("#messages").textContent = "Player 1's Turn";
             let square = document.querySelectorAll("td");
             console.log(newGame);
             for (let i = 0; i < square.length; i++){
@@ -112,7 +114,6 @@ const TicTacToe = (function(){
                         for (let i = 0; i < newGame.gameboard.length; i++){
                             newGame.gameboard[i] = true;
                         }
-                        currentPlayer.printWinner();
                         newGame.resetBoard();
                         newGame.player1.resetPlayers();
                         console.log("reset player1" + player1.prevMoves);
@@ -123,8 +124,11 @@ const TicTacToe = (function(){
                     console.log("gameboard" + newGame.gameboard);
                     if (currentPlayer == newGame.player1){
                         currentPlayer = newGame.player2;
+                        document.querySelector("#messages").textContent = "Player 2's Turn";
+
                     } else {
                         currentPlayer = newGame.player1;
+                        document.querySelector("#messages").textContent = "Player 1's Turn";
                     }
                 });
             }
@@ -132,7 +136,13 @@ const TicTacToe = (function(){
     }
     
     const start = document.querySelector("#start");
-    start.addEventListener("click", playGame);
+    start.addEventListener("click", () => {
+        const squares = document.querySelectorAll("td");
+        for (let i = 0; i < squares.length; i++){
+            squares[i].textContent = "";
+        }
+        playGame();
+    });
 
     const restart = document.querySelector("#restart");
     restart.addEventListener("click", () => {
